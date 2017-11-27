@@ -26,7 +26,9 @@ export class MainController {
         this.smoothScroll.scrollTo('navbar');
         this.reset();
         this.toaster.success('Thank you');
-      }, () => {});
+      }, () => {
+        this.toaster.error('This email address is already in use.');
+      });
 
     }
   }
