@@ -24,6 +24,7 @@ var SubscribeSchema = new _mongoose2.default.Schema({
   }
 });
 
+SubscribeSchema.index({ email: 1 }, { unique: true });
 (0, _subscribe.registerEvents)(SubscribeSchema);
 exports.default = _mongoose2.default.model('Subscribe', SubscribeSchema);
 //# sourceMappingURL=subscribe.model.js.map
