@@ -1,0 +1,67 @@
+<header class="header-unit">
+  <img src="assets/images/pattern.png">
+  <div class="intro">
+    <h3>STEM Education Resource</h3>
+    <h4>
+      The STEM Education Resource (SER) is a free online resource to support the teaching and learning of STEM at Years 9 & 10.
+    </h4>
+    <p>
+      SER allows students to complete four modules to solve an open-ended problem. The modules support students’
+      abilities to undertake STEM investigations by developing the high-level knowledge and skills required to solve
+      real-life, interdisciplinary problems.
+    </p>
+    <p>
+      SER is scheduled for launch mid-2018. Register below for updates.
+    </p>
+  </div>
+</header>
+
+<div class="body-unit">
+  <div class="container">
+    <h3>Register for SER updates</h3>
+    <form name="form" layout="column" ng-submit="MainCtrl.register(form)" novalidate>
+      <md-input-container>
+        <label>First name</label>
+        <input type="text" ng-model="MainCtrl.subscribe.fname" name="fname" required>
+      </md-input-container>
+      <div ng-messages="form.fname.$error" ng-if="form.fname.$error && MainCtrl.submitted">
+        <span ng-message="required">Please enter your first name</span>
+      </div>
+      <md-input-container>
+        <label>Surname</label>
+        <input type="text" ng-model="MainCtrl.subscribe.lname" name="lname" >
+      </md-input-container>
+      <md-input-container>
+        <label>School</label>
+        <input type="text" ng-model="MainCtrl.subscribe.school" name="school" required>
+      </md-input-container>
+      <div ng-messages="form.school.$error" ng-if="form.school.$error && MainCtrl.submitted">
+        <span ng-message="required">Please enter your school</span>
+      </div>
+      <md-input-container>
+        <label>Email</label>
+        <input type="email" ng-model="MainCtrl.subscribe.email" name="email" required>
+      </md-input-container>
+      <div ng-messages="form.email.$error" ng-if="form.email.$error && MainCtrl.submitted" class="err-messages">
+        <span ng-message="required">Please enter your email</span>
+        <span ng-message="email">Please enter a valid email</span>
+      </div>
+      <div>
+        <md-button class="brown-btn" type="submit">Sign up</md-button>
+      </div>
+    </form>
+    
+    
+    <div class="note">
+      <p>
+        The information on this form is being collected by the Networked Society Institute, University of Melbourne. You can contact us at networked-society@unimelb.edu.au
+      </p>
+      <p>
+        The information you provide will be used by the University of Melbourne and related entities to provide you information relating and updates about the STEM Education Resource and related activities. Your information will be protected against unauthorised access and use. You may access any personal information you have provided to the University of Melbourne by contacting networked-society@unimelb.edu.au.
+      </p>
+      <p>
+        The University of Melbourne is committed to protecting personal information provided by you in accordance with the Privacy and Data Protection Act 2014 (Vic). All information collected by the University is governed by the University’s Privacy Policy. For further information about how the University deals with personal information, please refer to the University’s Privacy Policy or contact the University’s Privacy Officer at privacy-officer@unimelb.edu.au
+      </p>
+    </div>
+  </div>
+</div>
