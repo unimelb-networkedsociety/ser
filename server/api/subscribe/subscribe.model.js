@@ -15,6 +15,6 @@ let SubscribeSchema = new mongoose.Schema({
   }
 });
 
-SubscribeSchema.index({email:1}, {unique: true});
+SubscribeSchema.index({ email: 1 }, { unique: true });
 registerEvents(SubscribeSchema);
 export default mongoose.model('Subscribe', SubscribeSchema);

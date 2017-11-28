@@ -9,7 +9,7 @@ export function toasterService(toastr) {
       return toastr.success(message, 'Success');
     },
 
-    error(message){
+    error(message) {
       return toastr.error(message, 'Error');
     }
   };
@@ -17,7 +17,7 @@ export function toasterService(toastr) {
 
 
 export default angular.module('serApp.toaster', [])
-  .config((toastrConfig) => {
+  .config(toastrConfig => {
     angular.extend(toastrConfig, {
       positionClass: 'toast-bottom-right'
     });
