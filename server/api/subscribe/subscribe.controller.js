@@ -92,7 +92,6 @@ export function upsert(req, res) {
     Reflect.deleteProperty(req.body, '_id');
   }
   return Subscribe.findOneAndUpdate({_id: req.params.id}, req.body, {new: true, upsert: true, setDefaultsOnInsert: true, runValidators: true}).exec()
-
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
