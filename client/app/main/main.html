@@ -19,7 +19,7 @@
 <div class="body-unit">
   <div class="container">
     <h3>Register for SER updates</h3>
-    <form name="form" layout="column" ng-submit="MainCtrl.register(form)" novalidate>
+    <form name="form" layout="column" novalidate>
       <md-input-container>
         <label>First name</label>
         <input type="text" ng-model="MainCtrl.subscribe.fname" name="fname" required>
@@ -47,7 +47,7 @@
         <span ng-message="email">Please enter a valid email</span>
       </div>
       <div>
-        <md-button class="brown-btn" type="submit">Sign up</md-button>
+        <md-button class="brown-btn" ng-click="MainCtrl.register(form)">Sign up</md-button>
       </div>
     </form>
     

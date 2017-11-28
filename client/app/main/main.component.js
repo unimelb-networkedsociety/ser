@@ -5,21 +5,20 @@ import routing from './main.routes';
 export class MainController {
 
   /*@ngInject*/
-  constructor($http, $scope, socket, Subscribe, toaster, smoothScroll) {
-    this.socket = socket;
+  constructor(Subscribe, toaster, smoothScroll) {
     this.Subscribe = Subscribe;
     this.toaster = toaster;
     this.smoothScroll = smoothScroll;
   }
 
-  reset(){
+  reset() {
     this.submitted = false;
     this.subscribe = {};
   }
 
-  register(form){
+  register(form) {
     this.submitted = true;
-    if(form.$valid){
+    if(form.$valid) {
       this.Subscribe.save(this.subscribe, () => {
         form.$setPristine();
         form.$setUntouched();
@@ -29,7 +28,6 @@ export class MainController {
       }, () => {
         this.toaster.error('This email address is already in use.');
       });
-
     }
   }
 }
