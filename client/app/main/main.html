@@ -29,8 +29,11 @@
       </div>
       <md-input-container>
         <label>Surname</label>
-        <input type="text" ng-model="MainCtrl.subscribe.lname" name="lname" >
+        <input type="text" ng-model="MainCtrl.subscribe.lname" name="lname" required>
       </md-input-container>
+      <div ng-messages="form.lname.$error" ng-if="form.lname.$error && MainCtrl.submitted">
+        <span ng-message="required">Please enter your surname</span>
+      </div>
       <md-input-container>
         <label>School</label>
         <input type="text" ng-model="MainCtrl.subscribe.school" name="school" required>
